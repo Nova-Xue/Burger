@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 text-center">
+            {{!-- left checkbox --}}
+
+            {{#each rest}}
+            <label><input type="checkbox" name="rest" class="checkbox yet-burger" value={{id}} data-name="{{burger_name}}">{{burger_name}}<button
+                    class="delete" value={{id}}>X</button></label><br>
+            {{/each}}
+
+
+        </div>
+        <div class="col-md-2 text-center">
+            {{!-- two buttons --}}
+            <button id="eat">eat it</button><br>
+            <button id="redo">not done yet</button>
+        </div>
+        <div class="col-md-5 text-center">
+            {{!-- right checkbox --}}
+            {{#each eaten}}
+            <label><input type="checkbox" name="eaten" class="checkbox eaten-burger" value={{id}} data-name="{{burger_name}}">{{burger_name}}<button
+                    class="delete" value={{id}}>X </button></label><br>
+            {{/each}}
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-3 text-center">
+            {{!-- user input --}}
+            <form action="/" method="POST">
+                <input type="text" name="burgerName" id="burger">
+                <input type="submit" value="submit" id="submit">
+            </form>
+        </div>
+    </div>
+</div>
