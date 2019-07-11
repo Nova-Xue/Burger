@@ -1,11 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-5 text-center">
+        <div class="col-md-4 offset-1 text-center border rounded">
             {{!-- left checkbox --}}
 
             {{#each rest}}
-            <label><input type="checkbox" name="rest" class="checkbox yet-burger" value={{id}} data-name="{{burger_name}}">{{burger_name}}<button
-                    class="delete" value={{id}}>X</button></label><br>
+            <label>
+                <input type="checkbox" name="rest" class="checkbox yet-burger" value={{id}}
+                    data-name="{{burger_name}}" style="opacity :0">
+                {{burger_name}}&nbsp&nbsp&nbsp&nbsp
+            </label>
+             <button class="delete" value={{id}}>X</button><br>
             {{/each}}
 
 
@@ -15,11 +19,14 @@
             <button id="eat">eat it</button><br>
             <button id="redo">not done yet</button>
         </div>
-        <div class="col-md-5 text-center">
+        <div class="col-md-4 text-center border rounded">
             {{!-- right checkbox --}}
             {{#each eaten}}
-            <label><input type="checkbox" name="eaten" class="checkbox eaten-burger" value={{id}} data-name="{{burger_name}}">{{burger_name}}<button
-                    class="delete" value={{id}}>X </button></label><br>
+            <label>
+                <input type="checkbox" name="eaten" class="checkbox eaten-burger" value={{id}}
+                    data-name="{{burger_name}}" style="opacity :0">{{burger_name}}&nbsp&nbsp&nbsp&nbsp
+                    </label>
+                    <button class="delete" value={{id}}>X</button><br>
             {{/each}}
 
 

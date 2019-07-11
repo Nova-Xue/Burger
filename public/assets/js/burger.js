@@ -1,4 +1,20 @@
 $(document).ready(function(){
+    $(".yet-burger").on("change",function(){
+        if($(this).prop("checked")){
+            $(this).parent().css("border-style","solid");
+            $(".yet-burger").not(this).parent().css("border-style","none");
+        }else{
+            $(this).parent().css("border-style","none");
+        }
+    });
+    $(".eaten-burger").on("change",function(){
+        if($(this).prop("checked")){
+            $(this).parent().css("border-style","solid");
+            $(".eaten-burger").not(this).parent().css("border-style","none");
+        }else{
+            $(this).parent().css("border-style","none");
+        }
+    });
     //single select for checkboxes
     $(".yet-burger").on("change", function () {
         $(".yet-burger").not(this).prop("checked", false);
